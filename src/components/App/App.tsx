@@ -1,12 +1,19 @@
-import './App.css'
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { Suspense } from "react";
 
-function App() {
+import Layout from "../layouts/Layout.tsx";
 
-  return (
-    <>
-      hello
-    </>
-  )
-}
+const router = createBrowserRouter([
+    {
+        path: "/",
+        element: (
+            <Suspense fallback={<div>...Loading</div>}>
+                <Layout />
+            </Suspense>
+        ),
+    },
+]);
+
+const App = () => <RouterProvider router={router} />
 
 export default App
