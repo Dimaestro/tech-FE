@@ -1,13 +1,23 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-
-import Layout from "../layouts/Layout.tsx";
 import Auth from "../pages/auth/Auth.tsx";
+import Home from "../pages/home/Home.tsx";
+import Dashboard from "../pages/dashboard/Dashboard.tsx";
+import PrivateRoute from "../../utils/router/PrivateRoute.tsx";
 
 const router = createBrowserRouter([
     {
         path: "/",
-        element: <Layout />,
-        children: [],
+        element: <Home />,
+    },
+    {
+        path: "dashboard",
+        element: <PrivateRoute />,
+        children: [
+            {
+                path: "",
+                element: <Dashboard />,
+            },
+        ],
     },
     {
         path: "auth",
