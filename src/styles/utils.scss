@@ -1,0 +1,57 @@
+@use "sass:math";
+
+@function px-to-rem($px, $base-font-size: 16) {
+  @return #{math.div($px, $base-font-size)}rem;
+}
+
+@function fluid-text($min: 16, $max: 20, $base-font-size: 16) {
+  $min-rem: math.div($min, $base-font-size);
+  $max-rem: math.div($max, $base-font-size);
+
+  @return clamp(#{$min-rem}rem, calc(#{$min-rem}rem + (#{$max-rem} - #{$min-rem}) * 1vw), #{$max-rem}rem);
+}
+
+@mixin image-sizes($width: 100, $height: 100) {
+  max-width: #{math.div($width, 16)}rem;
+  max-height: #{math.div($height, 16)}rem;
+}
+
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin abs-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@mixin visually-hidden {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  margin: -1px !important;
+  border: 0 !important;
+  padding: 0 !important;
+  white-space: nowrap !important;
+  clip-path: inset(100%) !important;
+  clip: rect(0 0 0 0) !important;
+  overflow: hidden !important;
+}
+
+@mixin hover {
+  @media (hover: hover) {
+    &:hover {
+      @content;
+    }
+  }
+
+  @media (hover: none) {
+    &:active {
+      @content;
+    }
+  }
+}
