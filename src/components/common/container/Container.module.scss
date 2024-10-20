@@ -1,0 +1,9 @@
+.container {
+  padding: 0 1rem;
+  margin: 0 auto;
+
+  @include desktop {
+    max-width: 1440px;
+    padding: 0;
+  }
+}

@@ -1,0 +1,7 @@
+.title {
+  font-size: fluid-text(24, 56);
+}
+
+.titleHidden {
+  @include visually-hidden;
+}

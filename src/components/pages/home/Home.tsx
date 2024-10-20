@@ -1,12 +1,10 @@
-// interface IHome {
-//
-// }
+import LayoutHomePage from "../../layouts/home/LayoutHomePage.tsx";
 
 const Home = () => {
     return (
-        <div>
-            Home
-        </div>
+        <LayoutHomePage>
+            Home Page
+        </LayoutHomePage>
     );
 };
 
