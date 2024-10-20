@@ -1,7 +1,7 @@
 const Layout = () => {
     return (
         <div>
-            hello Dima
+            Hello Dima
         </div>
     );
 };

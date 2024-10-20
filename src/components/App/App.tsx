@@ -1,19 +1,20 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import { Suspense } from "react";
 
 import Layout from "../layouts/Layout.tsx";
+import Auth from "../pages/auth/Auth.tsx";
 
 const router = createBrowserRouter([
     {
         path: "/",
-        element: (
-            <Suspense fallback={<div>...Loading</div>}>
-                <Layout />
-            </Suspense>
-        ),
+        element: <Layout />,
+        children: [],
+    },
+    {
+        path: "auth",
+        element: <Auth />,
     },
 ]);
 
 const App = () => <RouterProvider router={router} />
 
-export default App
+export default App;
