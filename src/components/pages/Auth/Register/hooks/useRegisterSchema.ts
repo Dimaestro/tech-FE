@@ -8,8 +8,8 @@ const useRegisterSchema = () => {
             .min(3, {message: "The first name must be at least 3 characters"})
             .max(50, {message: "The first name can be at most 50 characters"}),
         username: z.string()
-            .min(2, {message: "The first name must be at least 2 characters"})
-            .max(30, {message: "The first name can be at most 30 characters"}),
+            .min(2, {message: "The user name must be at least 2 characters"})
+            .max(30, {message: "The user name can be at most 30 characters"}),
         email: z.string().email({message: "Enter a correct email"}),
         password: z.string()
             .min(8, {message: "The password must be at least 8 characters"})
