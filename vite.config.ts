@@ -7,6 +7,8 @@ export default defineConfig({
     resolve: {
         alias: {
             '@': path.resolve(__dirname, 'src'),
+            '@ui': path.resolve(__dirname, 'src/components/ui'),
+            '@pages': path.resolve(__dirname, 'src/components/pages')
         },
     },
     css: {
@@ -14,9 +16,9 @@ export default defineConfig({
             scss: {
                 api: 'modern-compiler',
                 additionalData: `
-          @use "@/styles/utils.scss" as *;
-          @use "@/styles/media.scss" as *;
-        `
+                    @use "@/styles/utils.scss" as *;
+                    @use "@/styles/media.scss" as *;
+                `
             }
         }
     }

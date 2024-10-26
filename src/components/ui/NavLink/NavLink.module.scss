@@ -1,0 +1,12 @@
+.link {
+  color: #1976d2;
+  font-weight: 700;
+
+  @include hover {
+    color: #1565c0;
+  }
+}
+
+.active {
+  color: #1976d2;
+}

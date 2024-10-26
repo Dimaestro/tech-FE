@@ -1,7 +1,8 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import Auth from "../pages/auth/Auth.tsx";
-import Home from "../pages/home/Home.tsx";
-import Dashboard from "../pages/dashboard/Dashboard.tsx";
+
+import Auth from "../pages/Auth/Auth.tsx";
+import Home from "../pages/Home/Home.tsx";
+import Dashboard from "../pages/Dashboard/Dashboard.tsx";
 import PrivateRoute from "../../utils/router/PrivateRoute.tsx";
 
 const router = createBrowserRouter([
@@ -10,7 +11,7 @@ const router = createBrowserRouter([
         element: <Home />,
     },
     {
-        path: "login",
+        path: "Login",
         element: <Auth />,
     },
     {
@@ -18,7 +19,7 @@ const router = createBrowserRouter([
         element: <Auth />,
     },
     {
-        path: "dashboard",
+        path: "Dashboard",
         element: <PrivateRoute />,
         children: [
             {

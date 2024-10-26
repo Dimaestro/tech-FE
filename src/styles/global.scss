@@ -8,3 +8,37 @@
 html, body {
   height: 100%;
 }
+
+main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+
+.section {
+  width: 100%;
+  height: 100%;
+}
+
+.container {
+  padding: 0 1rem;
+  @include tablet {
+    padding: 0;
+  }
+}
+
+.form {
+  @include flex-center;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  gap: 2rem;
+}
+
+.title {
+  font-size: fluid-text(24, 46);
+  &--s {
+    font-size: fluid-text(24, 32);
+  }
+}

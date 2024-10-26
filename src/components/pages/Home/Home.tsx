@@ -1,4 +1,4 @@
-import LayoutHomePage from "../../layouts/home/LayoutHomePage.tsx";
+import LayoutHomePage from "../../layouts/Home/LayoutHomePage.tsx";
 
 const Home = () => {
     return (

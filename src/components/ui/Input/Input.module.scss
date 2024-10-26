@@ -1,0 +1,16 @@
+.input {
+  min-width: 100%;
+
+  :global .MuiInputBase-root.MuiOutlinedInput-root {
+    border-radius: .8rem;
+    font-family: "Poppins", serif;
+  }
+
+  :global .MuiFormLabel-root.MuiInputLabel-root {
+    padding-right: .2rem;
+    background-color: white;
+    font-family: "Poppins", serif;
+  }
+}
+
+
