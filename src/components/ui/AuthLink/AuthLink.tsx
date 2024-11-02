@@ -1,25 +1,25 @@
 import React from 'react';
-import { NavLink as Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
-import styles from "./NavLink.module.scss";
+import styles from "./AuthLink.module.scss";
 
-interface INavLink {
+interface IAuthLink {
     children: React.ReactNode,
     link: string
 }
 
-const NavLink: React.FC<INavLink> = (
+const AuthLink: React.FC<IAuthLink> = (
     {children, link}
 ) => {
     return (
-        <Link to={link} className={styles.link} viewTransition>
+        <NavLink to={link} className={styles.link} viewTransition>
             {({ isActive }) => (
                 <span className={isActive ? styles.active : ""}>
                     {children}
                 </span>
             )}
-        </Link>
+        </NavLink>
     );
 };
 
-export default NavLink;
+export default AuthLink;

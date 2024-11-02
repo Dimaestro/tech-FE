@@ -1,5 +1,5 @@
 import React from 'react';
-import NavLink from "@ui/NavLink/NavLink.tsx";
+import AuthLink from "@ui/AuthLink/AuthLink.tsx";
 
 import styles from "./AuthHelpText.module.scss";
 
@@ -10,8 +10,8 @@ interface IAuthHelpText {
 const AuthHelpText: React.FC<IAuthHelpText> = ({ isLogin }) => {
     return (
         <div className={styles.help}>
-            {isLogin ? <p>Don't have an account ? <NavLink link="/register">Sign Up</NavLink></p> :
-                <p>Have an account ? <NavLink link="/login">Sign In</NavLink></p>}
+            {isLogin ? <p>Don't have an account ? <AuthLink link="/register">Sign Up</AuthLink></p> :
+                <p>Have an account ? <AuthLink link="/login">Sign In</AuthLink></p>}
         </div>
     );
 };

@@ -12,6 +12,7 @@ type LoginFormData = z.infer<ReturnType<typeof useLoginSchema>>;
 
 const Login = () => {
     const schema = useLoginSchema();
+
     const {control, handleSubmit } = useForm<LoginFormData>({
         resolver: zodResolver(schema),
         defaultValues: {
