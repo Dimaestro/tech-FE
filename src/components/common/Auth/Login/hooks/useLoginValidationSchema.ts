@@ -1,7 +1,7 @@
 import {useMemo} from "react";
 import { z } from 'zod';
 
-const useLoginSchema = () => {
+const useLoginValidationSchema = () => {
     return useMemo(() => z.object({
             email: z.string().email({message: "Enter a correct email"}),
             password: z.string()
@@ -21,4 +21,4 @@ const useLoginSchema = () => {
         }), []);
 }
 
-export default useLoginSchema;
+export default useLoginValidationSchema;

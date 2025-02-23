@@ -1,9 +1,14 @@
+import React, { ReactNode } from "react";
 import styles from './Footer.module.scss';
 
-const Footer = () => {
+interface IFooter {
+    children: ReactNode;
+}
+const Footer: React.FC<IFooter> = ({ children }) => {
+
     return (
         <footer className={styles.footer}>
-            Footer
+            { children }
         </footer>
     );
 };

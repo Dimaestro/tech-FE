@@ -1,10 +1,8 @@
-import LayoutHomePage from "../../layouts/Home/LayoutHomePage.tsx";
-
 const Home = () => {
     return (
-        <LayoutHomePage>
+        <div>
             Home Page
-        </LayoutHomePage>
+        </div>
     );
 };
 

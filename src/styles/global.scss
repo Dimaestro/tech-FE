@@ -1,12 +1,23 @@
+html, body {
+  height: 100%;
+}
+
 #root {
+  height: 100%;
+}
+
+.app {
   display: flex;
   flex-direction: column;
   width: 100%;
   min-height: 100%;
-}
 
-html, body {
-  height: 100%;
+  background-color: var(--color-bg);
+  color: var(--color-text);
+
+  transition-property: background-color, color;
+  transition-duration: .3s;
+  transition-timing-function: ease-in-out;
 }
 
 main {

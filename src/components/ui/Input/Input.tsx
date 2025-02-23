@@ -27,7 +27,7 @@ const Input = <T extends FieldValues>(
     }: IInput<T>
 ) => {
     const [showPassword, setShowPassword] = useState(false);
-    const {field, fieldState: {invalid, error}} = useController({name, control})
+    const {field, fieldState: { invalid, error }} = useController({ name, control })
 
     const handleTogglePasswordVisibility = () => {
         setShowPassword(!showPassword);

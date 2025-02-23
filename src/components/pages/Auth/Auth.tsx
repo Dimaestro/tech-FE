@@ -1,8 +1,8 @@
-import {useLocation} from "react-router-dom";
+import { useLocation } from "react-router-dom";
 
-import Login from "./Login/Login.tsx";
-import Register from "./Register/Register.tsx";
-import AuthHelpText from "@/components/common/AuthHelpText/AuthHelpText.tsx";
+import Login from "@/components/common/Auth/Login";
+import Register from "@/components/common/Auth/Register";
+import AuthHelpText from "@/components/common/Auth/AuthHelpText";
 
 import styles from "./Auth.module.scss";
 

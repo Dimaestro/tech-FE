@@ -1,8 +1,7 @@
 import { useMemo } from "react";
 import { z } from "zod";
 
-
-const useRegisterSchema = () => {
+const useRegisterValidationSchema = () => {
     return useMemo(() => z.object({
         firstname: z.string()
             .min(2, {message: "The first name must be at least 2 characters"})
@@ -28,4 +27,4 @@ const useRegisterSchema = () => {
     }), []);
 };
 
-export default useRegisterSchema;
+export default useRegisterValidationSchema;
