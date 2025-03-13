@@ -1,3 +1,5 @@
+@use './utils' as *;
+
 html, body {
   height: 100%;
 }
@@ -34,7 +36,7 @@ main {
 
 .container {
   padding: 0 1rem;
-  @include tablet {
+  @include respond-to($tablet) {
     padding: 0;
   }
 }

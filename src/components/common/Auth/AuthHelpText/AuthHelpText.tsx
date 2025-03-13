@@ -10,8 +10,15 @@ interface IAuthHelpText {
 const AuthHelpText: React.FC<IAuthHelpText> = ({ isLogin }) => {
     return (
         <div className={styles.help}>
-            {isLogin ? <p>Don't have an account ? <AuthLink link="/register">Sign Up</AuthLink></p> :
-                <p>Have an account ? <AuthLink link="/login">Sign In</AuthLink></p>}
+            {isLogin ?
+                <p>
+                    Don't have an account ? <AuthLink link="/register">Sign Up</AuthLink>
+                </p>
+                :
+                <p>
+                    Have an account ? <AuthLink link="/login">Sign In</AuthLink>
+                </p>
+            }
         </div>
     );
 };

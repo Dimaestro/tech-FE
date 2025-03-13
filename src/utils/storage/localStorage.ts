@@ -7,7 +7,7 @@ const saveLocalStorage = (key: string, value: unknown): void => {
     }
 };
 
-const loadLocalStorage = <T = unknown>(key: string): T | undefined => {
+const getLocalStorage = <T = unknown>(key: string): T | undefined => {
     try {
         const serializedState = localStorage.getItem(key);
         return serializedState === null ? undefined : (JSON.parse(serializedState) as T);
@@ -27,7 +27,7 @@ const removeLocalStorage = (key: string): void => {
 
 export default {
     saveLocalStorage,
-    loadLocalStorage,
+    getLocalStorage,
     removeLocalStorage,
 };
 

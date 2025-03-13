@@ -1,5 +1,24 @@
 @use "sass:math";
 
+$desktop-l: 2185px;
+$desktop: 1440px;
+$laptop-l: 1280px;
+$laptop: 1024px;
+$tablet: 768px;
+$mobile: 480px;
+
+@mixin respond-to($breakpoint, $type: min) {
+  @if $type == min {
+    @media (min-width: $breakpoint) {
+      @content;
+    }
+  } @else if $type == max {
+    @media (max-width: $breakpoint) {
+      @content;
+    }
+  }
+}
+
 @function px-to-rem($px, $base-font-size: 16) {
   @return #{math.div($px, $base-font-size)}rem;
 }

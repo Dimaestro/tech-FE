@@ -1,6 +1,4 @@
-// interface IDashboard {
-//
-// }
+
 
 const Dashboard = () => {
     return (
