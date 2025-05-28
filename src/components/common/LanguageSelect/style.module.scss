@@ -1,0 +1,38 @@
+@use '@/styles/utils' as *;
+
+.languageSelect {
+  background-color: transparent;
+  //width: 100%;
+  max-width: px-to-rem(100);
+
+  @include hover {
+    background-color: transparent;
+  }
+
+  :global .MuiSvgIcon-root {
+    width: px-to-rem(16);
+    height: px-to-rem(16);
+  }
+
+  :global .MuiSvgIcon-root.MuiSelect-icon {
+    display: none;
+  }
+
+  :global .MuiSelect-select.MuiInputBase-input.MuiFilledInput-input {
+    padding-right: 0;
+  }
+
+  :global(.MuiSelect-select) {
+    padding: px-to-rem(4);
+  }
+
+  & .renderValue {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: px-to-rem(4);
+    font-size: px-to-rem(16);
+    text-transform: uppercase;
+    color: var(--color-text);
+  }
+}

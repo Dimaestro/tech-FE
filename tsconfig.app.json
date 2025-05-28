@@ -10,7 +10,11 @@
       "@/*": ["src/*"],
       "@ui/*": ["src/components/ui/*"],
       "@pages/*": ["src/pages/*"],
-      "@common/*": ["src/components/common/*"]
+      "@common/*": ["src/components/common/*"],
+      "@locales/*": ["src/locales/*"],
+      "@utils/*": ["src/utils/*"],
+      "@layouts/*": ["src/layouts/*"],
+      "@styles/*": ["src/styles/*"]
     },
 
     /* Bundler mode */

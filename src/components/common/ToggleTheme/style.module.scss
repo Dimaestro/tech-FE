@@ -1,0 +1,18 @@
+.buttonTheme {
+  margin: 0;
+
+  & :global .MuiSvgIcon-root {
+    width: 1rem;
+    height: 1rem;
+  }
+
+  &__dark {
+    &:hover {
+      background-color: rgba(202, 211, 243, 0.12);
+    }
+
+    & :global .MuiSvgIcon-root {
+      fill: white;
+    }
+  }
+}

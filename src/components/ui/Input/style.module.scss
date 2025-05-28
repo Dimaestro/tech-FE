@@ -1,0 +1,28 @@
+.input {
+  min-width: 100%;
+
+  :global .MuiInputBase-root.MuiOutlinedInput-root {
+    border-radius: .8rem;
+    font-family: "Poppins", serif;
+    color: var(--color-text);
+  }
+
+  :global .MuiFormLabel-root.MuiInputLabel-root {
+    padding-right: .2rem;
+    background-color: var(--color-bg);
+    font-family: "Poppins", serif;
+    color: var(--color-text);
+
+    &.Mui-focused {
+      color: var(--color-primary);
+    }
+  }
+
+  :global .MuiInputAdornment-root {
+    & .MuiSvgIcon-root {
+      fill: var(--color-text);
+    }
+  }
+}
+
+

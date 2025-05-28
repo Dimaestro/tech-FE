@@ -1,0 +1,8 @@
+@use '@/styles/utils' as *;
+
+.header {
+  display: flex;
+  justify-content: flex-end;
+  padding-right: px-to-rem(8);
+  padding-left: px-to-rem(8);
+}
