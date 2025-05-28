@@ -1,4 +1,5 @@
 import { createContext, ReactNode, useContext, useState } from "react";
+import {getLocalStorage, saveLocalStorage} from '@utils/storage/localStorage.ts';
 
 type Theme = 'light' | 'dark';
 
@@ -9,6 +10,7 @@ interface IThemeContext {
 
 const ThemeContext = createContext<IThemeContext | undefined>(undefined);
 
+// eslint-disable-next-line react-refresh/only-export-components
 export const useTheme = () => {
     const context = useContext(ThemeContext);
     if (!context) {
@@ -27,13 +29,13 @@ const getPreferredTheme = () => {
 
 export const ThemeProvider = ({ children }: { children: ReactNode }) => {
     const [theme, setTheme] = useState<Theme>(() => {
-        return localStorage.getItem('theme') as Theme || getPreferredTheme();
+        return getLocalStorage('theme') as Theme || getPreferredTheme();
     })
 
     const toggleTheme = () => {
         const newTheme = theme === 'dark' ? 'light' : 'dark';
         setTheme(newTheme);
-        localStorage.setItem('theme', newTheme);
+        saveLocalStorage('theme', newTheme);
     }
 
     return (

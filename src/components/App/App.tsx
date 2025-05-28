@@ -1,15 +1,15 @@
 import {createBrowserRouter, RouterProvider} from "react-router-dom";
 
-import Auth from "@/components/pages/Auth/Auth.tsx";
-import Home from "@/components/pages/Home/Home.tsx";
-import Dashboard from "@/components/pages/Dashboard/Dashboard.tsx";
+import Auth from "@/components/pages/Auth";
+import Home from "@/components/pages/Home";
+import Index from "@/components/pages/Dashboard";
 import PrivateRoute from "../../utils/router/PrivateRoute.tsx";
-import LayoutPage from "@/components/layouts/Home/LayoutPage.tsx";
+import LayoutHomePage from "@/components/layouts/Home";
 
 const router = createBrowserRouter([
     {
         path: "/",
-        element: <LayoutPage/>,
+        element: <LayoutHomePage/>,
         children: [
             {
                 path: "",
@@ -18,11 +18,11 @@ const router = createBrowserRouter([
         ]
     },
     {
-        path: "login",
+        path: "signin",
         element: <Auth/>,
     },
     {
-        path: "register",
+        path: "signup",
         element: <Auth/>,
     },
     {
@@ -31,7 +31,7 @@ const router = createBrowserRouter([
         children: [
             {
                 path: "",
-                element: <Dashboard/>,
+                element: <Index/>,
             },
         ],
     },
