@@ -1,9 +1,9 @@
 @use '@/styles/utils' as *;
 
 .languageSelect {
-  background-color: transparent;
-  //width: 100%;
+  // width: 100%;
   max-width: px-to-rem(100);
+  background-color: transparent;
 
   @include hover {
     background-color: transparent;
@@ -28,11 +28,11 @@
 
   & .renderValue {
     display: flex;
-    align-items: center;
     justify-content: center;
+    align-items: center;
     gap: px-to-rem(4);
     font-size: px-to-rem(16);
-    text-transform: uppercase;
     color: var(--color-text);
+    text-transform: uppercase;
   }
 }

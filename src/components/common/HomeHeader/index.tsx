@@ -1,17 +1,13 @@
-import React, {ReactNode} from 'react';
+import React, { ReactNode } from 'react';
 
 import styles from './style.module.scss';
 
 interface IHomeHeader {
-    children: ReactNode;
+  children: ReactNode;
 }
 
 const HomeHeader: React.FC<IHomeHeader> = ({ children }) => {
-    return (
-        <header className={styles.header}>
-            { children }
-        </header>
-    );
+  return <header className={styles.header}>{children}</header>;
 };
 
 export default HomeHeader;

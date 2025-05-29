@@ -6,21 +6,21 @@ import en from '@locales/en.json';
 import ru from '@locales/ru.json';
 
 i18n
-    .use(initReactI18next)
-    .use(LanguageDetector)
-    .init({
-        resources: {
-            en: { translation: en },
-            ru: { translation: ru },
-        },
-        fallbackLng: 'en',
-        interpolation: {
-            escapeValue: false,
-        },
-        detection: {
-            order: ['localStorage', 'navigator'],
-            caches: ['localStorage'],
-        }
-    });
+  .use(initReactI18next)
+  .use(LanguageDetector)
+  .init({
+    resources: {
+      en: { translation: en },
+      ru: { translation: ru },
+    },
+    fallbackLng: 'en',
+    interpolation: {
+      escapeValue: false,
+    },
+    detection: {
+      order: ['localStorage', 'navigator'],
+      caches: ['localStorage'],
+    },
+  });
 
 export default i18n;

@@ -1,4 +1,4 @@
-@use "sass:math";
+@use 'sass:math';
 
 $desktop-l: 2185px;
 $desktop: 1440px;
@@ -27,7 +27,11 @@ $mobile: 480px;
   $min-rem: math.div($min, $base-font-size);
   $max-rem: math.div($max, $base-font-size);
 
-  @return clamp(#{$min-rem}rem, calc(#{$min-rem}rem + (#{$max-rem} - #{$min-rem}) * 1vw), #{$max-rem}rem);
+  @return clamp(
+    #{$min-rem}rem,
+    calc(#{$min-rem}rem + (#{$max-rem} - #{$min-rem}) * 1vw),
+    #{$max-rem}rem
+  );
 }
 
 @mixin image-sizes($width: 100, $height: 100) {
@@ -53,12 +57,12 @@ $mobile: 480px;
   width: 1px !important;
   height: 1px !important;
   margin: -1px !important;
-  border: 0 !important;
   padding: 0 !important;
+  border: 0 !important;
+  overflow: hidden !important;
   white-space: nowrap !important;
   clip-path: inset(100%) !important;
   clip: rect(0 0 0 0) !important;
-  overflow: hidden !important;
 }
 
 @mixin hover {
