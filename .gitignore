@@ -1,4 +1,8 @@
 node_modules/
+dist
 .env
+*.tsbuildinfo
+tsconfig.app.tsbuildinfo
+tsconfig.node.tsbuildinfo
 .DS_Store
 .idea
