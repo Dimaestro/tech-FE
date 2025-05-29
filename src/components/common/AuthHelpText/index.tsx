@@ -13,11 +13,11 @@ const AuthHelpText: React.FC<IAuthHelpText> = ({ isSignIn }) => {
       {isSignIn ? (
         <p>
           Don&#39;t have an account ?{' '}
-          <AuthLink link="/signup">Sign Up</AuthLink>
+          <AuthLink link="/auth/signup">Sign Up</AuthLink>
         </p>
       ) : (
         <p>
-          Have an account ? <AuthLink link="/signin">Sign In</AuthLink>
+          Have an account ? <AuthLink link="/auth/signin">Sign In</AuthLink>
         </p>
       )}
     </div>

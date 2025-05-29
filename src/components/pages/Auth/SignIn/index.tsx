@@ -7,7 +7,7 @@ import Input from '@ui/Input';
 import Button from '@ui/Button';
 import Title from '@ui/Title';
 
-import useSignInValidationSchema from '@/components/pages/Auth/components/SignIn/hooks/useSignInValidationSchema.ts';
+import useSignInValidationSchema from '@pages/Auth/SignIn/hooks/useSignInValidationSchema.ts';
 
 export type SignInFormDataTypes = z.infer<
   ReturnType<typeof useSignInValidationSchema>

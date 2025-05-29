@@ -5,7 +5,8 @@ import HomeFooter from '@common/HomeFooter';
 import ToggleTheme from '@common/ToggleTheme';
 import LanguageSelect from '@common/LanguageSelect';
 
-import { Outlet } from 'react-router-dom';
+import { Outlet } from 'react-router';
+import LanguageSelectPopover from '@common/LanguageSelectPopover';
 
 const LayoutHomePage: React.FC = () => {
   return (
@@ -13,6 +14,7 @@ const LayoutHomePage: React.FC = () => {
       <HomeHeader>
         <ToggleTheme />
         <LanguageSelect />
+        <LanguageSelectPopover />
       </HomeHeader>
       <main>
         <Outlet />

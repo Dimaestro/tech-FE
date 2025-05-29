@@ -1,37 +1,39 @@
-import { createBrowserRouter, RouterProvider } from 'react-router-dom';
-
-import Auth from '@/components/pages/Auth';
+import { RouterProvider } from 'react-router/dom';
+import { createBrowserRouter } from 'react-router';
+import PrivateRoute from '@utils/router/PrivateRoute.tsx';
 import Home from '@/components/pages/Home';
-import Index from '@/components/pages/Dashboard';
-import PrivateRoute from '../../utils/router/PrivateRoute.tsx';
 import LayoutHomePage from '@/components/layouts/Home';
+import SignIn from '@pages/Auth/SignIn';
+import SignUp from '@pages/Auth/SignUp';
+import AuthLayout from '@/components/layouts/Auth';
+import Dashboard from '@/components/pages/Dashboard';
 
 const router = createBrowserRouter([
   {
     path: '/',
-    element: <LayoutHomePage />,
+    Component: LayoutHomePage,
     children: [
       {
-        path: '',
-        element: <Home />,
+        index: true,
+        Component: Home,
       },
     ],
   },
   {
-    path: 'signin',
-    element: <Auth />,
-  },
-  {
-    path: 'signup',
-    element: <Auth />,
+    path: 'auth',
+    Component: AuthLayout,
+    children: [
+      { path: 'signin', Component: SignIn },
+      { path: 'signup', Component: SignUp },
+    ],
   },
   {
     path: 'dashboard',
-    element: <PrivateRoute />,
+    Component: PrivateRoute,
     children: [
       {
         path: '',
-        element: <Index />,
+        Component: Dashboard,
       },
     ],
   },
