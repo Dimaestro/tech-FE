@@ -1,11 +1,10 @@
 import * as React from 'react';
+import { Outlet } from 'react-router';
 
 import HomeHeader from '@common/HomeHeader';
 import HomeFooter from '@common/HomeFooter';
 import ToggleTheme from '@common/ToggleTheme';
 import LanguageSelect from '@common/LanguageSelect';
-
-import { Outlet } from 'react-router';
 import LanguageSelectPopover from '@common/LanguageSelectPopover';
 
 const LayoutHomePage: React.FC = () => {

@@ -1,7 +1,7 @@
 import { createContext, ReactNode, useContext, useState } from 'react';
 import {
   getLocalStorage,
-  saveLocalStorage,
+  setLocalStorage,
 } from '@utils/storage/localStorage.ts';
 
 type Theme = 'light' | 'dark';
@@ -39,7 +39,7 @@ export const ThemeProvider = ({ children }: { children: ReactNode }) => {
   const toggleTheme = () => {
     const newTheme = theme === 'dark' ? 'light' : 'dark';
     setTheme(newTheme);
-    saveLocalStorage('theme', newTheme);
+    setLocalStorage('theme', newTheme);
   };
 
   return (

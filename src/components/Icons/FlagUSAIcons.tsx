@@ -1,6 +1,6 @@
 import Icon from '@mui/material/SvgIcon';
 
-const FlagEnglandIcons = ({ ...props }) => (
+const FlagUSAIcons = ({ ...props }) => (
   <Icon {...props} width="16" height="16" viewBox="0 0 32 32">
     <rect x="1" y="4" width="30" height="24" rx="4" ry="4" fill="#fff"></rect>
     <path
@@ -107,4 +107,4 @@ const FlagEnglandIcons = ({ ...props }) => (
   </Icon>
 );
 
-export default FlagEnglandIcons;
+export default FlagUSAIcons;

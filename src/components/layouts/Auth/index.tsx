@@ -1,5 +1,6 @@
 import { Outlet, useLocation } from 'react-router';
 import AuthHelpText from '@common/AuthHelpText';
+import clsx from 'clsx';
 
 import styles from './style.module.scss';
 
@@ -9,8 +10,8 @@ const AuthLayout = () => {
 
   return (
     <main>
-      <section className={`section ${styles.auth}`}>
-        <div className={`container ${styles.container}`}>
+      <section className={clsx('section', styles.auth)}>
+        <div className={clsx('container', styles.container)}>
           <div className={styles.wrapper}>
             <Outlet />
             <AuthHelpText isSignIn={isSignIn} />

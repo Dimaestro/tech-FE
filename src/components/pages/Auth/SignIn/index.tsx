@@ -3,9 +3,9 @@ import { zodResolver } from '@hookform/resolvers/zod';
 import { SubmitHandler, useForm } from 'react-hook-form';
 import { useTranslation } from 'react-i18next';
 
-import Input from '@ui/Input';
-import Button from '@ui/Button';
-import Title from '@ui/Title';
+import Input from '@common/Input';
+import Button from '@common/Button';
+import Title from '@common/Title';
 
 import useSignInValidationSchema from '@pages/Auth/SignIn/hooks/useSignInValidationSchema.ts';
 

@@ -1,8 +1,8 @@
 import * as React from 'react';
 import Popover from '@mui/material/Popover';
 import Typography from '@mui/material/Typography';
-import FlagEnglandIcons from '../Icons/FlagEnglandIcons';
 import { IconButton } from '@mui/material';
+import FlagUSAIcons from '@/components/Icons/FlagUSAIcons.tsx';
 
 const LanguageSelectPopover = () => {
   const [anchorEl, setAnchorEl] = React.useState<HTMLButtonElement | null>(
@@ -23,7 +23,7 @@ const LanguageSelectPopover = () => {
   return (
     <div>
       <IconButton onClick={handleClick}>
-        <FlagEnglandIcons />
+        <FlagUSAIcons />
       </IconButton>
       <Popover
         id={id}

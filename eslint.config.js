@@ -85,7 +85,7 @@ export default tseslint.config(
           jsx: true,
         },
         project: './tsconfig.app.json',
-        tsconfigRootDir: __dirname, // Теперь __dirname определен корректно
+        tsconfigRootDir: __dirname,
       },
     },
     plugins: {

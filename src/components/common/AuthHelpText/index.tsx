@@ -1,5 +1,5 @@
 import React from 'react';
-import AuthLink from '@ui/AuthLink';
+import AuthLink from '@common/AuthLink';
 
 import styles from './style.module.scss';
 

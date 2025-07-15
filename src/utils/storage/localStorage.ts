@@ -1,4 +1,4 @@
-export const saveLocalStorage = (key: string, value: unknown): void => {
+export const setLocalStorage = (key: string, value: unknown): void => {
   try {
     const serializedState = JSON.stringify(value);
     localStorage.setItem(key, serializedState);
